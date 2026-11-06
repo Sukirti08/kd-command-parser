@@ -3,7 +3,7 @@
 set -euo pipefail
 PY="${PY:-.venv/bin/python}"
 LOCUST="${LOCUST:-.venv/bin/locust}"
-HOST="${HOST:-http://localhost:8080}"
+HOST="${HOST:-http://localhost:${HTTP_PORT:-8080}}"
 ts() { date '+%Y-%m-%dT%H:%M:%S'; }
 log() { echo "[$(ts)] $*" | tee -a "$OUT/events.log"; }
 

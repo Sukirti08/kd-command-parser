@@ -14,6 +14,11 @@ OLLAMA_URL  ?= http://host.docker.internal:11434
 IMG         ?= parser-service:0.1.0
 WORKER_IMG  ?= kd-worker:0.1.0
 SUBSET      ?=
+# Host port for the Ingress. 8080 is the standard; override in a git-ignored local.mk
+# (e.g. `echo HTTP_PORT=8081 > local.mk`) if another program already uses 8080.
+HTTP_PORT   ?= 8080
+-include local.mk
+export HTTP_PORT
 VENV        := .venv
 PY          := $(VENV)/bin/python
 export PY
@@ -33,7 +38,7 @@ help:
 
 ## --- whole system -----------------------------------------------------------
 up: env venv cluster secrets storage buckets data-upload models image deploy ## build + deploy everything
-	@echo "Ready: curl -s -X POST localhost:8080/parse -H 'Content-Type: application/json' -d '{\"text\":\"what is the weather in london\"}'"
+	@echo "Ready: curl -s -X POST localhost:$(HTTP_PORT)/parse -H 'Content-Type: application/json' -d '{\"text\":\"what is the weather in london\"}'"
 
 down: ## delete the cluster
 	k3d cluster delete $(CLUSTER)
@@ -58,7 +63,10 @@ $(VENV)/.train: training/requirements.txt | venv
 	touch $@
 
 cluster:
-	k3d cluster list $(CLUSTER) >/dev/null 2>&1 || k3d cluster create --config cluster/k3d.yaml
+	if ! k3d cluster list $(CLUSTER) >/dev/null 2>&1; then \
+	  if [ "$(HTTP_PORT)" = "8080" ]; then k3d cluster create --config cluster/k3d.yaml; \
+	  else sed "s/port: 8080:80 /port: $(HTTP_PORT):80 /" cluster/k3d.yaml > /tmp/k3d-local.yaml; \
+	       k3d cluster create --config /tmp/k3d-local.yaml; fi; fi
 	kubectl apply -f k8s/namespaces.yaml
 
 secrets:
