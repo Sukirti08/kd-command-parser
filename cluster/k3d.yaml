@@ -1,0 +1,22 @@
+# k3d cluster for the mini project:  k3d cluster create --config cluster/k3d.yaml
+apiVersion: k3d.io/v1alpha5
+kind: Simple
+metadata:
+  name: kd
+servers: 1
+agents: 0
+image: rancher/k3s:v1.30.6-k3s1
+ports:
+  - port: 8080:80          # Traefik ingress -> http://localhost:8080/parse
+    nodeFilters:
+      - loadbalancer
+  - port: 8333:30333       # SeaweedFS S3 NodePort -> http://localhost:8333
+    nodeFilters:
+      - server:0
+options:
+  k3d:
+    wait: true
+    timeout: "180s"
+  kubeconfig:
+    updateDefaultKubeconfig: true
+    switchCurrentContext: true

@@ -1,0 +1,94 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+    tags: [final]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "release = trained student from GitHub Release; untrained = raw EleutherAI/pythia-70m (should FAIL the gate)"
+        type: choice
+        options: [release, untrained]
+        default: release
+      release_tag:
+        description: "Release tag holding the model asset"
+        default: model-v1
+
+permissions:
+  contents: read
+
+env:
+  MODEL_SOURCE: ${{ github.event.inputs.model || 'release' }}
+  RELEASE_TAG: ${{ github.event.inputs.release_tag || 'model-v1' }}
+
+jobs:
+  secret-scan:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - name: gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install ruff==0.8.4
+      - run: ruff check .
+
+  unit-tests:
+    needs: lint
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install -r requirements-host.txt
+      - run: pytest -v
+
+  evaluate:
+    needs: unit-tests
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: pip, cache-dependency-path: training/requirements.txt}
+      - run: pip install -r training/requirements.txt
+      - name: Download model from GitHub Release and verify checksum
+        if: env.MODEL_SOURCE == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          V="${RELEASE_TAG#model-}"
+          gh release download "$RELEASE_TAG" -p "model-$V.tar.gz" -p "model-$V.sha256" -D dist
+          (cd dist && sha256sum -c "model-$V.sha256")
+          tar -xzf "dist/model-$V.tar.gz" -C dist
+          echo "MODEL_PATH=dist/model-$V" >> "$GITHUB_ENV"
+      - name: Use untrained Pythia-70M (deliberately bad model)
+        if: env.MODEL_SOURCE == 'untrained'
+        run: echo "MODEL_PATH=EleutherAI/pythia-70m" >> "$GITHUB_ENV"
+      - name: Predict on validation.jsonl
+        run: python training/predict.py --model "$MODEL_PATH" --data data/validation.jsonl --out ci/predictions.jsonl
+      - name: Score
+        run: python tools/score.py ci/predictions.jsonl data/validation.jsonl --out ci/score.json && cat ci/score.json
+      - uses: actions/upload-artifact@v4
+        with: {name: evaluation, path: ci/}
+
+  quality-gate:
+    needs: evaluate
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - uses: actions/download-artifact@v4
+        with: {name: evaluation, path: ci/}
+      - name: JSON validity must be >= 95%
+        run: python tools/score.py ci/predictions.jsonl data/validation.jsonl --min-validity 95

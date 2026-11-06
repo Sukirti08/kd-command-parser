@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: parser
+  namespace: app
+  labels: {app: parser}
+spec:
+  replicas: 2
+  revisionHistoryLimit: 5
+  selector: {matchLabels: {app: parser}}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: {maxSurge: 1, maxUnavailable: 0}   # never drop below current Ready count
+  template:
+    metadata: {labels: {app: parser}}
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: parser
+          image: parser-service:0.1.0
+          imagePullPolicy: IfNotPresent
+          ports: [{name: http, containerPort: 8000}]
+          env:
+            - {name: MODEL_URI, value: "s3://models/v1/"}
+            - {name: MODEL_VERSION, value: "v1"}
+            - {name: S3_ENDPOINT, value: "http://seaweedfs.data.svc.cluster.local:8333"}
+            - {name: MAX_NEW_TOKENS, value: "48"}
+            - {name: FAULT_INJECT, value: "0"}
+            - {name: TORCH_THREADS, value: "1"}
+            - name: POD_NAME
+              valueFrom: {fieldRef: {fieldPath: metadata.name}}
+          envFrom:
+            - secretRef: {name: s3-credentials}   # AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY
+          resources:
+            requests: {cpu: 500m, memory: 512Mi}
+            limits: {cpu: "1", memory: 1Gi}
+          readinessProbe:
+            httpGet: {path: /readyz, port: http}
+            periodSeconds: 2
+            failureThreshold: 2
+            timeoutSeconds: 2
+          livenessProbe:
+            httpGet: {path: /healthz, port: http}
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            failureThreshold: 3
+            timeoutSeconds: 3
+          lifecycle:
+            preStop:   # let Traefik drop the endpoint before the process stops
+              exec: {command: ["python", "-c", "import time; time.sleep(8)"]}

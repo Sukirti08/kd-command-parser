@@ -1,0 +1,23 @@
+# Single source of truth for training. `make train` reads only this file.
+model_name: EleutherAI/pythia-70m
+model_revision: main
+data_path: results/data/train.jsonl     # output of worker/clean.py (copy of s3://datasets/v1/train.jsonl)
+max_train_records: 1500                 # first 1,500 records of the cleaned dataset (id order)
+output_dir: training/out/v1
+version: v1
+
+seed: 42
+learning_rate: 0.0003
+batch_size: 16
+epochs: 8
+max_seq_length: 96
+weight_decay: 0.0
+warmup_ratio: 0.05
+torch_threads: 0                        # 0 = let torch decide
+
+library_versions:                       # checked at start-up; mismatch prints a warning
+  python: "3.12"
+  torch: "2.5.1"
+  transformers: "4.46.3"
+  tokenizers: "0.20.3"
+  pyyaml: "6.0.2"

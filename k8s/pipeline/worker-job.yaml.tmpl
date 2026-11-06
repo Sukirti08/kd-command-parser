@@ -1,0 +1,30 @@
+# Rendered once per shard by `make label` (SHARD_INDEX / SHARD_COUNT substituted).
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: teacher-worker-${SHARD_INDEX}
+  namespace: pipeline
+  labels: {app: teacher-worker, shard: "${SHARD_INDEX}"}
+spec:
+  backoffLimit: 6          # worker is resumable, retries continue where it stopped
+  ttlSecondsAfterFinished: 86400
+  template:
+    metadata: {labels: {app: teacher-worker, shard: "${SHARD_INDEX}"}}
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: worker
+          image: kd-worker:0.1.0
+          imagePullPolicy: IfNotPresent
+          env:
+            - {name: SHARD_INDEX, value: "${SHARD_INDEX}"}
+            - {name: SHARD_COUNT, value: "${SHARD_COUNT}"}
+            - {name: S3_ENDPOINT, value: "http://seaweedfs.data.svc.cluster.local:8333"}
+            - {name: OLLAMA_URL, value: "${OLLAMA_URL}"}
+            - {name: INPUT_URI, value: "s3://datasets/commands_pool.jsonl"}
+            - {name: OUTPUT_PREFIX, value: "s3://datasets/teacher/"}
+          envFrom:
+            - secretRef: {name: s3-credentials}
+          resources:
+            requests: {cpu: 50m, memory: 64Mi}
+            limits: {cpu: 250m, memory: 256Mi}

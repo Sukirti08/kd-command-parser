@@ -1,0 +1,23 @@
+# v2 = v1 with two more epochs (everything else identical). Used for the rolling update.
+model_name: EleutherAI/pythia-70m
+model_revision: main
+data_path: results/data/train.jsonl
+max_train_records: 1500
+output_dir: training/out/v2
+version: v2
+
+seed: 42
+learning_rate: 0.0003
+batch_size: 16
+epochs: 10
+max_seq_length: 96
+weight_decay: 0.0
+warmup_ratio: 0.05
+torch_threads: 0
+
+library_versions:
+  python: "3.12"
+  torch: "2.5.1"
+  transformers: "4.46.3"
+  tokenizers: "0.20.3"
+  pyyaml: "6.0.2"
