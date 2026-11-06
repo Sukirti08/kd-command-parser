@@ -9,7 +9,7 @@ import requests
 
 TEACHER_MODEL = os.environ.get("TEACHER_MODEL", "phi3.5")
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434")
-NUM_PREDICT = int(os.environ.get("TEACHER_NUM_PREDICT", "128"))
+NUM_PREDICT = int(os.environ.get("TEACHER_NUM_PREDICT", "64"))
 DEFAULT_PROMPT = Path(__file__).resolve().parent.parent / "prompts" / "teacher_prompt.txt"
 
 
@@ -24,7 +24,7 @@ def render(template: str, command: str) -> str:
 
 def options() -> dict:
     """Fixed by the assignment for every student: temperature 0, seed 42."""
-    return {"temperature": 0, "seed": 42, "num_predict": NUM_PREDICT}
+    return {"temperature": 0, "seed": 42, "num_predict": NUM_PREDICT, "stop": ["\nCommand", "\n\n"]}
 
 
 def ask(template: str, command: str, retries: int = 5, timeout: int = 600) -> str:
