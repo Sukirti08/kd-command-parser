@@ -6,7 +6,7 @@ metadata:
   namespace: pipeline
   labels: {app: teacher-worker, shard: "${SHARD_INDEX}"}
 spec:
-  backoffLimit: 6          # worker is resumable, retries continue where it stopped
+  backoffLimit: 100          # worker is resumable, retries continue where it stopped
   ttlSecondsAfterFinished: 86400
   template:
     metadata: {labels: {app: teacher-worker, shard: "${SHARD_INDEX}"}}

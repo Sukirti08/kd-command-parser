@@ -1,6 +1,6 @@
 ---
 title: "Knowledge Distillation and Deployment of a Command-Parsing Model on a Local Cloud"
-author: "S Naveen — <roll number> — CS3081"
+author: "S Naveen — 230101100 — CS3081"
 ---
 <!--
 Fill every ⟨…⟩ from the files in results/. Never type a number that is not in a file.
@@ -8,7 +8,7 @@ Convert: pandoc report/report_template.md -o report/report.pdf  (≤ 8 pages + a
 Label everything as MEASURED (from a file) or ASSUMPTION.
 -->
 
-**Repository:** ⟨link⟩ · **Tag:** `final` · **Machine:** ⟨CPU, cores, RAM, OS, Docker version⟩ (all measurements on this machine)
+**Repository:** https://github.com/Sukirti08/kd-command-parser · **Tag:** `final` · **Machine:** Intel i5-1155G7 (4 cores/8 threads), 8 GB RAM, Windows 11 + WSL2 Ubuntu 24.04, Docker Desktop 4.98, k3d 5.9 (all measurements on this machine)
 
 # Architecture
 
@@ -20,7 +20,7 @@ S3 at start-up using credentials from a Secret. ⟨insert diagram⟩
 # Task 1 — Object storage and parallel teacher labelling
 
 **Setup.** Cluster from `cluster/k3d.yaml`; SeaweedFS in `data`; `commands_pool.jsonl` in
-`datasets`. Teacher: `phi3.5` on the laptop via Ollama, `temperature=0, seed=42`, `num_predict=128`,
+`datasets`. Teacher: `phi3.5` on the laptop via Ollama, `temperature=0, seed=42`, `num_predict=64` and stop sequences `"\nCommand"`, `"\n\n"`,
 prompt `prompts/teacher_prompt.txt` (rules + one example per intent, none from validation).
 
 **Sharding.** Each worker reads `SHARD_INDEX` (from 0) and `SHARD_COUNT` and keeps line *n* of the pool
@@ -33,6 +33,8 @@ The object is re-uploaded every 10 records and a restarted worker skips ids alre
 retry resumes rather than restarts. Limitation: both workers share one Ollama process on one CPU,
 so throughput barely improves with more shards; sharding pays off only with several teacher
 replicas on separate cores or machines. MEASURED throughput: ⟨cmd/s from worker logs⟩, total time ⟨h⟩.
+
+**What happened in practice (MEASURED).** On this 8 GB CPU-only laptop phi3.5 first took about 35 s per command because it kept generating extra few-shot examples after the JSON until `num_predict`; adding stop sequences cut this to about 11 s per command without changing the JSON. While the laptop sat idle overnight Windows throttled the CPU (about 5 commands per hour against about 250 per hour when active), which was fixed by disabling power throttling for Ollama and keeping the machine awake. A Windows restart stopped both worker Jobs (they exhausted their retries); after recreating them with `backoffLimit: 100` they resumed from the 730 records already saved in object storage, demonstrating the resumable, per-shard design.
 
 **Cleaning counts** (MEASURED, `results/clean_counts.json`; checks applied in order a→d, each record
 counted once, de-duplication by normalised text after filtering):
@@ -56,7 +58,7 @@ not instruction-tuned; enough to learn a fixed output template, weak at semantic
 
 | Model (validation, 100) | json_validity | intent | date | time | place | full_frame |
 |---|---|---|---|---|---|---|
-| Teacher phi3.5 | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ |
+| Teacher phi3.5 | 100.0 | 84.0 | 74.0 | 83.0 | 86.0 | 42.0 |
 | Pythia-70M untrained | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ |
 | Student v1 | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ | ⟨⟩ |
 
@@ -83,7 +85,7 @@ Config only from `MODEL_URI`, `MODEL_VERSION`, `S3_ENDPOINT`, `MAX_NEW_TOKENS`, 
 credentials from a Secret. Every output is validated against `schema.json`; invalid → HTTP 500
 `{"error":"invalid_model_output"}`. Greedy decoding stops at the end of the first JSON object.
 One generation at a time per Pod (lock) and `torch` set to 1 thread to match the 1-CPU limit.
-Image: `python:3.11-slim`, CPU-only torch, all packages pinned, size MEASURED ⟨MB⟩.
+Image: `python:3.11-slim`, CPU-only torch, all packages pinned, size MEASURED 1.27 GB on disk (273 MB compressed).
 50 sequential requests at `--cpus 1 --memory 1g`: ⟨status codes, time⟩; peak memory MEASURED
 ⟨MiB⟩ (cgroup `memory.peak`); OOMKilled = ⟨false⟩ (`results/task3_memtest/`).
 
@@ -104,13 +106,13 @@ endpoints are removed before shutdown. Endpoints empty while loading: ⟨evidenc
 **Limitations.** Single node: no fault tolerance across machines; a laptop failure takes down the
 whole cluster, storage included (SeaweedFS has one replica on a local-path volume). HPA uses
 metrics-server samples (~15 s) and CPU % of *request*, and max 2 replicas on shared laptop cores
-means a second replica adds little real capacity. ⟨anything else observed⟩
+means a second replica adds little real capacity. Host port 8080 was occupied by a Windows service (AgentService.exe), so on this laptop the Ingress was published on 8081 through a git-ignored `local.mk`; the repository default remains 8080.
 
 # Task 5 — Subnetting and network ACL
 
 Table and working: `network/subnets.md`. app 10.20.0.0/22, public 10.20.4.0/24, data 10.20.5.0/25,
 management 10.20.5.128/27. NACL rules: `network/make_nacl.py` → `nacl.json`;
-`nacl_sim.py --check`: ⟨6/6⟩. **Why:** a NACL is stateless and does not remember connections, so
+`nacl_sim.py --check`: 6/6 (100%). **Why:** a NACL is stateless and does not remember connections, so
 every reply is judged as a new packet and needs its own rule (clients' ephemeral ports 1024–65535
 outbound; app replies to the LB's ephemeral ports inbound). Rules are evaluated lowest number first
 and the first match wins, so the deny for 198.51.100.0/24 (rule 90) must be numbered below the
