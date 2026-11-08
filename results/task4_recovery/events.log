@@ -1,0 +1,10 @@
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE
+parser   2/2     2            2           97m
+[2026-11-08T08:50:32] deleting pod parser-56ff966cf-gczmr
+[2026-11-08T08:50:33] ready 2/2
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/parser   2/2     2            2           100m
+
+NAME                         READY   STATUS    RESTARTS   AGE
+pod/parser-56ff966cf-jtcm8   1/1     Running   0          2m23s
+pod/parser-56ff966cf-xghck   1/1     Running   0          6m58s
