@@ -1,3 +1,3 @@
-shard-0.jsonl: 520 records
-shard-1.jsonl: 500 records
-pool=3000 covered=1020 missing=1980 repeated=0 extra=0
+shard-0.jsonl: 1500 records
+shard-1.jsonl: 1500 records
+pool=3000 covered=3000 missing=0 repeated=0 extra=0
