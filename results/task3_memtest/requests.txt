@@ -1,0 +1,1 @@
+50 sequential requests in 39.6s, status codes: {200: 50}

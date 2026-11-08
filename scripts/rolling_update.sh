@@ -2,7 +2,7 @@
 # Task 4.5: v1 -> v2 rolling update under load, then kubectl rollout undo.
 source scripts/lib.sh
 OUT=results/task4_rolling; mkdir -p "$OUT"; : > "$OUT/events.log"
-hdr() { curl -s -D - -o /dev/null -X POST "$HOST/parse" -H 'Content-Type: application/json' \
+hdr() { curl -s -m 20 -D - -o /dev/null -X POST "$HOST/parse" -H 'Content-Type: application/json' \
           -d '{"text":"set an alarm for six am"}' | grep -i x-model-version | tr -d '\r'; }
 log "before: $(hdr)"
 W=$(watch_k8s "$OUT/watch.txt")

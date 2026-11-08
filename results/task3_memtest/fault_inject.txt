@@ -1,0 +1,10 @@
+--- FAULT_INJECT=1 check ---
+HTTP/1.1 500 Internal Server Error
+date: Sun, 08 Nov 2026 07:19:38 GMT
+server: uvicorn
+x-model-version: v1
+x-served-by: fae6f15352e7
+content-length: 32
+content-type: application/json
+
+{"error":"invalid_model_output"}

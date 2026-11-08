@@ -1,0 +1,4 @@
+[2026-11-08T07:26:17] scaling to 1 replica to start from the minimum
+[2026-11-08T07:26:17] load: 8 users for 4 minutes
+[2026-11-08T07:30:19] idle for 3 minutes (scale-down window 60 s)
+[2026-11-08T07:33:19] done; see results/task4_hpa/watch.txt and hpa_describe.txt (Events show SuccessfulRescale)

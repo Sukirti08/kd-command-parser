@@ -1,0 +1,103 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     172.80.0.1:54586 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+2026-11-08 07:16:40,287 INFO Found credentials in environment variables.
+INFO:     172.80.0.1:54592 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:54606 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:54614 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:53222 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:53226 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:53242 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:53254 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:53268 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:53272 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:53274 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:53284 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:53292 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:52410 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:52426 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:52432 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:52440 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:52446 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:52458 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:52474 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:52488 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:38638 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+2026-11-08 07:17:06,736 INFO Downloaded model v1 (8 files) from http://host.docker.internal:8333/models/v1/ in 25.4s
+INFO:     172.80.0.1:38652 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:38660 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:56888 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:56904 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:56908 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:56924 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:56928 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:56940 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:56942 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:59786 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:59798 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:59804 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:59812 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:59824 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:59836 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:59852 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:59866 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:37050 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:37058 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:37068 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:37076 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     172.80.0.1:37088 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+2026-11-08 07:17:40,824 INFO Model v1 loaded; ready
+INFO:     172.80.0.1:37100 - "GET /readyz HTTP/1.1" 200 OK
+INFO:     172.80.0.1:37116 - "GET /readyz HTTP/1.1" 200 OK
+INFO:     172.80.0.1:37118 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:39626 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:39636 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:39648 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:39660 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:39668 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:39672 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:39686 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:39696 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:39708 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56836 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56838 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56846 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56854 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56858 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56862 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56868 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56884 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56896 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56910 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56926 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56930 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56938 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56944 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56958 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:56970 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:57956 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:57972 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:57982 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:57994 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:58010 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:58014 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:58028 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:58034 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:58040 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:58052 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:58062 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:58076 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:58092 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:58108 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:59788 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:59792 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:59794 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:59796 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:59806 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:59818 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:59834 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:59838 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:59842 - "POST /parse HTTP/1.1" 200 OK
+INFO:     172.80.0.1:59856 - "POST /parse HTTP/1.1" 200 OK

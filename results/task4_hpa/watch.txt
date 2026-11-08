@@ -1,0 +1,395 @@
+=== 2026-11-08T07:26:17
+parser   1/1   1     1     14m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     1     14m
+parser-56ff966cf-hkqgw   1/1   Running   0     14m
+parser-56ff966cf-hkqgw   5m    448Mi   
+=== 2026-11-08T07:26:23
+parser   1/1   1     1     14m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 1%/70%   1     2     1     14m
+parser-56ff966cf-hkqgw   1/1   Running   0     14m
+parser-56ff966cf-hkqgw   5m    448Mi   
+=== 2026-11-08T07:26:30
+parser   1/1   1     1     14m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 1%/70%   1     2     1     14m
+parser-56ff966cf-hkqgw   1/1   Running   0     14m
+parser-56ff966cf-hkqgw   5m    448Mi   
+=== 2026-11-08T07:26:38
+parser   1/1   1     1     14m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 14%/70%   1     2     1     14m
+parser-56ff966cf-hkqgw   1/1   Running   0     14m
+parser-56ff966cf-hkqgw   70m   452Mi   
+=== 2026-11-08T07:26:48
+parser   1/1   1     1     14m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 14%/70%   1     2     1     14m
+parser-56ff966cf-hkqgw   1/1   Running   0     14m
+parser-56ff966cf-hkqgw   984m   495Mi   
+=== 2026-11-08T07:26:55
+parser   1/2   2     1     14m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 196%/70%   1     2     1     14m
+parser-56ff966cf-hkqgw   1/1   Running             0     14m
+parser-56ff966cf-hw8wh   0/1   ContainerCreating   0     2s
+parser-56ff966cf-hkqgw   984m   495Mi   
+=== 2026-11-08T07:27:02
+parser   1/2   2     1     14m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 196%/70%   1     2     1     14m
+parser-56ff966cf-hkqgw   1/1   Running   0     14m
+parser-56ff966cf-hw8wh   0/1   Running   0     10s
+parser-56ff966cf-hkqgw   945m   543Mi   
+=== 2026-11-08T07:27:09
+parser   1/2   2     1     14m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 189%/70%   1     2     2     14m
+parser-56ff966cf-hkqgw   1/1   Running   0     14m
+parser-56ff966cf-hw8wh   0/1   Running   0     17s
+parser-56ff966cf-hkqgw   945m   543Mi   
+=== 2026-11-08T07:27:18
+parser   1/2   2     1     15m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 189%/70%   1     2     2     15m
+parser-56ff966cf-hkqgw   1/1   Running   0     15m
+parser-56ff966cf-hw8wh   0/1   Running   0     27s
+parser-56ff966cf-hkqgw   945m   543Mi   
+parser-56ff966cf-hw8wh   504m   87Mi    
+=== 2026-11-08T07:27:26
+parser   1/2   2     1     15m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 189%/70%   1     2     2     15m
+parser-56ff966cf-hkqgw   1/1   Running   0     15m
+parser-56ff966cf-hw8wh   0/1   Running   0     34s
+parser-56ff966cf-hkqgw   945m   543Mi   
+parser-56ff966cf-hw8wh   504m   87Mi    
+=== 2026-11-08T07:27:33
+parser   1/2   2     1     15m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 189%/70%   1     2     2     15m
+parser-56ff966cf-hkqgw   1/1   Running   0     15m
+parser-56ff966cf-hw8wh   0/1   Running   0     41s
+parser-56ff966cf-hkqgw   851m   546Mi   
+parser-56ff966cf-hw8wh   515m   214Mi   
+=== 2026-11-08T07:27:40
+parser   1/2   2     1     15m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 170%/70%   1     2     2     15m
+parser-56ff966cf-hkqgw   1/1   Running   0     15m
+parser-56ff966cf-hw8wh   0/1   Running   0     48s
+parser-56ff966cf-hkqgw   851m   546Mi   
+parser-56ff966cf-hw8wh   515m   214Mi   
+=== 2026-11-08T07:27:49
+parser   1/2   2     1     15m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 170%/70%   1     2     2     15m
+parser-56ff966cf-hkqgw   1/1   Running   0     15m
+parser-56ff966cf-hw8wh   0/1   Running   0     61s
+parser-56ff966cf-hkqgw   894m   578Mi   
+parser-56ff966cf-hw8wh   819m   380Mi   
+=== 2026-11-08T07:28:01
+parser   2/2   2     2     15m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 178%/70%   1     2     2     15m
+parser-56ff966cf-hkqgw   1/1   Running   0     15m
+parser-56ff966cf-hw8wh   1/1   Running   0     82s
+parser-56ff966cf-hkqgw   894m   578Mi   
+parser-56ff966cf-hw8wh   292m   424Mi   
+=== 2026-11-08T07:28:23
+parser   2/2   2     2     16m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 178%/70%   1     2     2     16m
+parser-56ff966cf-hkqgw   1/1   Running   0     16m
+parser-56ff966cf-hw8wh   1/1   Running   0     95s
+parser-56ff966cf-hkqgw   504m   579Mi   
+parser-56ff966cf-hw8wh   402m   447Mi   
+=== 2026-11-08T07:28:35
+parser   2/2   2     2     16m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 100%/70%   1     2     2     16m
+parser-56ff966cf-hkqgw   1/1   Running   0     16m
+parser-56ff966cf-hw8wh   1/1   Running   0     103s
+parser-56ff966cf-hkqgw   531m   583Mi   
+parser-56ff966cf-hw8wh   402m   447Mi   
+=== 2026-11-08T07:28:42
+parser   2/2   2     2     16m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 100%/70%   1     2     2     16m
+parser-56ff966cf-hkqgw   1/1   Running   0     16m
+parser-56ff966cf-hw8wh   1/1   Running   0     110s
+parser-56ff966cf-hkqgw   531m   583Mi   
+parser-56ff966cf-hw8wh   402m   447Mi   
+=== 2026-11-08T07:28:49
+parser   2/2   2     2     16m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 106%/70%   1     2     2     16m
+parser-56ff966cf-hkqgw   1/1   Running   0     16m
+parser-56ff966cf-hw8wh   1/1   Running   0     117s
+parser-56ff966cf-hkqgw   817m   609Mi   
+parser-56ff966cf-hw8wh   866m   657Mi   
+=== 2026-11-08T07:28:56
+parser   2/2   2     2     16m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 106%/70%   1     2     2     16m
+parser-56ff966cf-hkqgw   1/1   Running   0     16m
+parser-56ff966cf-hw8wh   1/1   Running   0     2m3s
+parser-56ff966cf-hkqgw   817m   609Mi   
+parser-56ff966cf-hw8wh   866m   657Mi   
+=== 2026-11-08T07:29:02
+parser   2/2   2     2     16m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 168%/70%   1     2     2     16m
+parser-56ff966cf-hkqgw   1/1   Running   0     16m
+parser-56ff966cf-hw8wh   1/1   Running   0     2m9s
+parser-56ff966cf-hkqgw   978m   606Mi   
+parser-56ff966cf-hw8wh   966m   671Mi   
+=== 2026-11-08T07:29:08
+parser   2/2   2     2     16m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 168%/70%   1     2     2     16m
+parser-56ff966cf-hkqgw   1/1   Running   0     16m
+parser-56ff966cf-hw8wh   1/1   Running   0     2m15s
+parser-56ff966cf-hkqgw   978m   606Mi   
+parser-56ff966cf-hw8wh   966m   671Mi   
+=== 2026-11-08T07:29:15
+parser   2/2   2     2     16m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 168%/70%   1     2     2     16m
+parser-56ff966cf-hkqgw   1/1   Running   0     16m
+parser-56ff966cf-hw8wh   1/1   Running   0     2m22s
+parser-56ff966cf-hkqgw   978m   606Mi   
+parser-56ff966cf-hw8wh   966m   671Mi   
+=== 2026-11-08T07:29:21
+parser   2/2   2     2     17m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 194%/70%   1     2     2     17m
+parser-56ff966cf-hkqgw   1/1   Running   0     17m
+parser-56ff966cf-hw8wh   1/1   Running   0     2m28s
+parser-56ff966cf-hkqgw   987m   609Mi   
+parser-56ff966cf-hw8wh   987m   676Mi   
+=== 2026-11-08T07:29:27
+parser   2/2   2     2     17m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 194%/70%   1     2     2     17m
+parser-56ff966cf-hkqgw   1/1   Running   0     17m
+parser-56ff966cf-hw8wh   1/1   Running   0     2m35s
+parser-56ff966cf-hkqgw   987m   609Mi   
+parser-56ff966cf-hw8wh   987m   676Mi   
+=== 2026-11-08T07:29:34
+parser   2/2   2     2     17m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 197%/70%   1     2     2     17m
+parser-56ff966cf-hkqgw   1/1   Running   0     17m
+parser-56ff966cf-hw8wh   1/1   Running   0     2m41s
+parser-56ff966cf-hkqgw   978m   605Mi   
+parser-56ff966cf-hw8wh   974m   676Mi   
+=== 2026-11-08T07:29:41
+parser   2/2   2     2     17m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 197%/70%   1     2     2     17m
+parser-56ff966cf-hkqgw   1/1   Running   0     17m
+parser-56ff966cf-hw8wh   1/1   Running   0     2m48s
+parser-56ff966cf-hkqgw   978m   605Mi   
+parser-56ff966cf-hw8wh   974m   676Mi   
+=== 2026-11-08T07:29:47
+parser   2/2   2     2     17m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 195%/70%   1     2     2     17m
+parser-56ff966cf-hkqgw   1/1   Running   0     17m
+parser-56ff966cf-hw8wh   1/1   Running   0     2m54s
+parser-56ff966cf-hkqgw   981m   605Mi   
+parser-56ff966cf-hw8wh   971m   677Mi   
+=== 2026-11-08T07:29:54
+parser   2/2   2     2     17m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 195%/70%   1     2     2     17m
+parser-56ff966cf-hkqgw   1/1   Running   0     17m
+parser-56ff966cf-hw8wh   1/1   Running   0     3m
+parser-56ff966cf-hkqgw   981m   605Mi   
+parser-56ff966cf-hw8wh   971m   677Mi   
+=== 2026-11-08T07:30:00
+parser   2/2   2     2     17m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 195%/70%   1     2     2     17m
+parser-56ff966cf-hkqgw   1/1   Running   0     17m
+parser-56ff966cf-hw8wh   1/1   Running   0     3m7s
+parser-56ff966cf-hkqgw   981m   605Mi   
+parser-56ff966cf-hw8wh   971m   677Mi   
+=== 2026-11-08T07:30:06
+parser   2/2   2     2     17m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 195%/70%   1     2     2     17m
+parser-56ff966cf-hkqgw   1/1   Running   0     17m
+parser-56ff966cf-hw8wh   1/1   Running   0     3m13s
+parser-56ff966cf-hkqgw   981m   605Mi   
+parser-56ff966cf-hw8wh   987m   681Mi   
+=== 2026-11-08T07:30:12
+parser   2/2   2     2     17m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 195%/70%   1     2     2     17m
+parser-56ff966cf-hkqgw   1/1   Running   0     17m
+parser-56ff966cf-hw8wh   1/1   Running   0     3m20s
+parser-56ff966cf-hkqgw   981m   605Mi   
+parser-56ff966cf-hw8wh   987m   681Mi   
+=== 2026-11-08T07:30:19
+parser   2/2   2     2     18m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 196%/70%   1     2     2     18m
+parser-56ff966cf-hkqgw   1/1   Running   0     18m
+parser-56ff966cf-hw8wh   1/1   Running   0     3m26s
+parser-56ff966cf-hkqgw   986m   602Mi   
+parser-56ff966cf-hw8wh   979m   684Mi   
+=== 2026-11-08T07:30:26
+parser   2/2   2     2     18m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 196%/70%   1     2     2     18m
+parser-56ff966cf-hkqgw   1/1   Running   0     18m
+parser-56ff966cf-hw8wh   1/1   Running   0     3m32s
+parser-56ff966cf-hkqgw   986m   602Mi   
+parser-56ff966cf-hw8wh   979m   684Mi   
+=== 2026-11-08T07:30:31
+parser   2/2   2     2     18m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 196%/70%   1     2     2     18m
+parser-56ff966cf-hkqgw   1/1   Running   0     18m
+parser-56ff966cf-hw8wh   1/1   Running   0     3m38s
+parser-56ff966cf-hkqgw   986m   602Mi   
+parser-56ff966cf-hw8wh   979m   684Mi   
+=== 2026-11-08T07:30:37
+parser   2/2   2     2     18m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 196%/70%   1     2     2     18m
+parser-56ff966cf-hkqgw   1/1   Running   0     18m
+parser-56ff966cf-hw8wh   1/1   Running   0     3m44s
+parser-56ff966cf-hkqgw   981m   601Mi   
+parser-56ff966cf-hw8wh   546m   684Mi   
+=== 2026-11-08T07:30:43
+parser   2/2   2     2     18m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 196%/70%   1     2     2     18m
+parser-56ff966cf-hkqgw   1/1   Running   0     18m
+parser-56ff966cf-hw8wh   1/1   Running   0     3m49s
+parser-56ff966cf-hkqgw   981m   601Mi   
+parser-56ff966cf-hw8wh   546m   684Mi   
+=== 2026-11-08T07:30:49
+parser   2/2   2     2     18m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 152%/70%   1     2     2     18m
+parser-56ff966cf-hkqgw   1/1   Running   0     18m
+parser-56ff966cf-hw8wh   1/1   Running   0     3m55s
+parser-56ff966cf-hkqgw   79m   601Mi   
+parser-56ff966cf-hw8wh   4m    683Mi   
+=== 2026-11-08T07:30:54
+parser   2/2   2     2     18m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 152%/70%   1     2     2     18m
+parser-56ff966cf-hkqgw   1/1   Running   0     18m
+parser-56ff966cf-hw8wh   1/1   Running   0     4m1s
+parser-56ff966cf-hkqgw   79m   601Mi   
+parser-56ff966cf-hw8wh   4m    683Mi   
+=== 2026-11-08T07:31:00
+parser   2/2   2     2     18m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 152%/70%   1     2     2     18m
+parser-56ff966cf-hkqgw   1/1   Running   0     18m
+parser-56ff966cf-hw8wh   1/1   Running   0     4m7s
+parser-56ff966cf-hkqgw   79m   601Mi   
+parser-56ff966cf-hw8wh   4m    683Mi   
+=== 2026-11-08T07:31:06
+parser   2/2   2     2     18m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 8%/70%   1     2     2     18m
+parser-56ff966cf-hkqgw   1/1   Running   0     18m
+parser-56ff966cf-hw8wh   1/1   Running   0     4m12s
+parser-56ff966cf-hkqgw   4m    601Mi   
+parser-56ff966cf-hw8wh   4m    684Mi   
+=== 2026-11-08T07:31:12
+parser   2/2   2     2     18m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 8%/70%   1     2     2     18m
+parser-56ff966cf-hkqgw   1/1   Running   0     18m
+parser-56ff966cf-hw8wh   1/1   Running   0     4m18s
+parser-56ff966cf-hkqgw   4m    601Mi   
+parser-56ff966cf-hw8wh   4m    684Mi   
+=== 2026-11-08T07:31:17
+parser   2/2   2     2     19m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     2     19m
+parser-56ff966cf-hkqgw   1/1   Running   0     19m
+parser-56ff966cf-hw8wh   1/1   Running   0     4m24s
+parser-56ff966cf-hkqgw   3m    601Mi   
+parser-56ff966cf-hw8wh   4m    684Mi   
+=== 2026-11-08T07:31:23
+parser   2/2   2     2     19m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     2     19m
+parser-56ff966cf-hkqgw   1/1   Running   0     19m
+parser-56ff966cf-hw8wh   1/1   Running   0     4m30s
+parser-56ff966cf-hkqgw   3m    601Mi   
+parser-56ff966cf-hw8wh   4m    684Mi   
+=== 2026-11-08T07:31:29
+parser   2/2   2     2     19m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     2     19m
+parser-56ff966cf-hkqgw   1/1   Running   0     19m
+parser-56ff966cf-hw8wh   1/1   Running   0     4m36s
+parser-56ff966cf-hkqgw   3m    601Mi   
+parser-56ff966cf-hw8wh   4m    684Mi   
+=== 2026-11-08T07:31:35
+parser   2/2   2     2     19m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     2     19m
+parser-56ff966cf-hkqgw   1/1   Running   0     19m
+parser-56ff966cf-hw8wh   1/1   Running   0     4m41s
+parser-56ff966cf-hkqgw   4m    601Mi   
+parser-56ff966cf-hw8wh   4m    683Mi   
+=== 2026-11-08T07:31:41
+parser   2/2   2     2     19m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     2     19m
+parser-56ff966cf-hkqgw   1/1   Running   0     19m
+parser-56ff966cf-hw8wh   1/1   Running   0     4m47s
+parser-56ff966cf-hkqgw   4m    601Mi   
+parser-56ff966cf-hw8wh   4m    683Mi   
+=== 2026-11-08T07:31:46
+parser   2/2   2     2     19m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     2     19m
+parser-56ff966cf-hkqgw   1/1   Running   0     19m
+parser-56ff966cf-hw8wh   1/1   Running   0     4m53s
+parser-56ff966cf-hkqgw   4m    601Mi   
+parser-56ff966cf-hw8wh   4m    683Mi   
+=== 2026-11-08T07:31:52
+parser   1/1   1     1     19m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     2     19m
+parser-56ff966cf-hkqgw   1/1   Running       0     19m
+parser-56ff966cf-hw8wh   1/1   Terminating   0     4m59s
+parser-56ff966cf-hkqgw   4m    601Mi   
+parser-56ff966cf-hw8wh   4m    683Mi   
+=== 2026-11-08T07:31:58
+parser   1/1   1     1     19m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     2     19m
+parser-56ff966cf-hkqgw   1/1   Running       0     19m
+parser-56ff966cf-hw8wh   0/1   Terminating   0     5m5s
+parser-56ff966cf-hkqgw   4m    601Mi   
+parser-56ff966cf-hw8wh   4m    683Mi   
+=== 2026-11-08T07:32:04
+parser   1/1   1     1     19m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     1     19m
+parser-56ff966cf-hkqgw   1/1   Running   0     19m
+parser-56ff966cf-hkqgw   3m    601Mi   
+=== 2026-11-08T07:32:10
+parser   1/1   1     1     19m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     1     19m
+parser-56ff966cf-hkqgw   1/1   Running   0     19m
+parser-56ff966cf-hkqgw   3m    601Mi   
+=== 2026-11-08T07:32:16
+parser   1/1   1     1     19m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     1     19m
+parser-56ff966cf-hkqgw   1/1   Running   0     19m
+parser-56ff966cf-hkqgw   3m    601Mi   
+=== 2026-11-08T07:32:22
+parser   1/1   1     1     20m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     1     20m
+parser-56ff966cf-hkqgw   1/1   Running   0     20m
+parser-56ff966cf-hkqgw   4m    601Mi   
+=== 2026-11-08T07:32:27
+parser   1/1   1     1     20m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     1     20m
+parser-56ff966cf-hkqgw   1/1   Running   0     20m
+parser-56ff966cf-hkqgw   4m    601Mi   
+=== 2026-11-08T07:32:33
+parser   1/1   1     1     20m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 1%/70%   1     2     1     20m
+parser-56ff966cf-hkqgw   1/1   Running   0     20m
+parser-56ff966cf-hkqgw   5m    601Mi   
+=== 2026-11-08T07:32:39
+parser   1/1   1     1     20m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 1%/70%   1     2     1     20m
+parser-56ff966cf-hkqgw   1/1   Running   0     20m
+parser-56ff966cf-hkqgw   5m    601Mi   
+=== 2026-11-08T07:32:45
+parser   1/1   1     1     20m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 1%/70%   1     2     1     20m
+parser-56ff966cf-hkqgw   1/1   Running   0     20m
+parser-56ff966cf-hkqgw   5m    601Mi   
+=== 2026-11-08T07:32:51
+parser   1/1   1     1     20m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     1     20m
+parser-56ff966cf-hkqgw   1/1   Running   0     20m
+parser-56ff966cf-hkqgw   4m    601Mi   
+=== 2026-11-08T07:32:57
+parser   1/1   1     1     20m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     1     20m
+parser-56ff966cf-hkqgw   1/1   Running   0     20m
+parser-56ff966cf-hkqgw   4m    601Mi   
+=== 2026-11-08T07:33:02
+parser   1/1   1     1     20m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     1     20m
+parser-56ff966cf-hkqgw   1/1   Running   0     20m
+parser-56ff966cf-hkqgw   4m    602Mi   
+=== 2026-11-08T07:33:08
+parser   1/1   1     1     20m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     1     20m
+parser-56ff966cf-hkqgw   1/1   Running   0     20m
+parser-56ff966cf-hkqgw   4m    602Mi   
+=== 2026-11-08T07:33:14
+parser   1/1   1     1     20m   parser   parser-service:0.1.0   app=parser
+parser   Deployment/parser   cpu: 0%/70%   1     2     1     20m
+parser-56ff966cf-hkqgw   1/1   Running   0     20m
+parser-56ff966cf-hkqgw   4m    602Mi   

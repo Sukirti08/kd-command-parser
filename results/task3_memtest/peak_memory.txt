@@ -1,0 +1,6 @@
+--- cgroup memory.peak (bytes) ---
+1073741824
+--- max from docker stats ---
+parser-memtest 96.42% 596.2MiB / 1GiB
+--- OOMKilled / restarts ---
+OOMKilled=false Status=running RestartCount=0
