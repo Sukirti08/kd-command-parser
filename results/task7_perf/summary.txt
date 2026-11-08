@@ -1,0 +1,46 @@
+{
+  "loadtest": {
+    "requests": 151,
+    "failures": 0,
+    "p50_ms": 2700.0,
+    "p95_ms": 8200.0,
+    "rps": 1.2699080106761476
+  },
+  "error_rate_pct": 0.0,
+  "pods": {
+    "parser-56ff966cf-d8lrb": {
+      "cpu_m_avg": 671,
+      "cpu_m_max": 930.0,
+      "mem_mi_avg": 414,
+      "mem_mi_max": 424.0,
+      "samples": 20
+    },
+    "parser-56ff966cf-sgkw8": {
+      "cpu_m_avg": 731,
+      "cpu_m_max": 898.0,
+      "mem_mi_avg": 349,
+      "mem_mi_max": 372.0,
+      "samples": 20
+    }
+  },
+  "cold_start_median_s": 49,
+  "slo": {
+    "target": "99.0% of /parse requests succeed (HTTP 200 within 30 s)",
+    "window": "one standard load-test run",
+    "requests": 151,
+    "error_budget_requests": 1.51,
+    "failures": 0,
+    "budget_used_pct": 0.0
+  },
+  "cost": {
+    "rate_card_keys": {
+      "cpu": "vcpu_hour",
+      "mem": "gib_memory_hour"
+    },
+    "step1_per_replica_hour": "1.0 vCPU x 3.5 + 1.0 GiB x 0.45 = 3.950000",
+    "step2_all_replicas_hour": "2 x 3.950000 = 7.900000",
+    "step3_requests_per_hour": "1.270 req/s x 3600 = 4571.7",
+    "step4_cost_per_1000": "7.900000 / 4571.7 x 1000 = 1.728034",
+    "NOTE": "check the units in rate_card.json match per-vCPU-hour and per-GiB-hour"
+  }
+}

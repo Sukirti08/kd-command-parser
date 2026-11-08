@@ -1,0 +1,9 @@
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE    CONTAINERS   IMAGES                 SELECTOR
+deployment.apps/parser   2/2     2            2           119m   parser       parser-service:0.1.0   app=parser
+
+NAME                                         REFERENCE           TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/parser   Deployment/parser   cpu: 1%/70%   2         2         2          119m
+
+NAME                         READY   STATUS    RESTARTS   AGE   IP           NODE              NOMINATED NODE   READINESS GATES
+pod/parser-56ff966cf-d8lrb   1/1     Running   0          12m   10.42.0.70   k3d-kd-server-0   <none>           <none>
+pod/parser-56ff966cf-sgkw8   1/1     Running   0          42s   10.42.0.72   k3d-kd-server-0   <none>           <none>
