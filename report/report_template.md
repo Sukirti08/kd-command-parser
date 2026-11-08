@@ -122,8 +122,8 @@ allows for 80/443 (100/110); otherwise the allow would match first and admit the
 
 `make up` (3 commands from a fresh clone), `make down`. Workflow `.github/workflows/ci.yml`:
 lint (ruff) → unit tests (13) → evaluation (Release asset, checksum verified, `score.py`) →
-quality gate (`--min-validity 95`); gitleaks in parallel. Passing run: ⟨link⟩.
-**Failing gate run (untrained Pythia-70M):** ⟨link⟩, validity ⟨%⟩. Gitleaks: ⟨no leaks⟩.
+quality gate (`--min-validity 95`); gitleaks in parallel. Passing run: https://github.com/Sukirti08/kd-command-parser/actions/runs/42474155821.
+**Failing gate run (untrained Pythia-70M):** https://github.com/Sukirti08/kd-command-parser/actions/runs/42466398400, validity 0% < 95%. Gitleaks: no leaks.
 
 # Task 7 — Performance, cost and review
 
