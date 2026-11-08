@@ -1,1 +1,0 @@
-.venv/bin/python training/train.py --config training/config_v2.yaml
