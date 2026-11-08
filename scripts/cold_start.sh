@@ -6,12 +6,12 @@ for run in 1 2 3; do
   old=$(kubectl -n app get pods -l app=parser -o jsonpath='{.items[*].metadata.name}')
   log "run $run: deleting $old"
   kubectl -n app delete pods -l app=parser --wait=false
-  sleep 3
+  for o in $old; do kubectl -n app wait --for=delete pod/"$o" --timeout=180s || true; done
   kubectl -n app wait --for=condition=Ready pod -l app=parser --timeout=300s
   sleep 2
   kubectl -n app get pods -l app=parser -o json > "$OUT/run${run}_pods.json"
   for p in $(kubectl -n app get pods -l app=parser -o jsonpath='{.items[*].metadata.name}'); do
-    kubectl -n app logs "$p" > "$OUT/run${run}_${p}.log"
+    kubectl -n app logs "$p" > "$OUT/run${run}_${p}.log" || true
     grep -E "Downloaded model|loaded; ready" "$OUT/run${run}_${p}.log" | sed "s/^/[run$run $p] /" | tee -a "$OUT/events.log"
   done
   $PY - "$OUT/run${run}_pods.json" "$run" <<'PY' | tee -a "$OUT/times.txt"

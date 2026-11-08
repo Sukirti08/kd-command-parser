@@ -1,0 +1,20 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-11-08 08:59:44,372 INFO Found credentials in environment variables.
+INFO:     10.42.0.1:34232 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:34234 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:34250 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:41516 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+2026-11-08 08:59:51,154 INFO Downloaded model v1 (8 files) from http://seaweedfs.data.svc.cluster.local:8333/models/v1/ in 6.2s
+INFO:     10.42.0.1:41518 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:41528 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:41536 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:41548 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:50300 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:50302 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     10.42.0.1:50322 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+2026-11-08 09:00:03,348 INFO Model v1 loaded; ready
+INFO:     10.42.0.1:50334 - "GET /readyz HTTP/1.1" 200 OK
+INFO:     10.42.0.1:50338 - "GET /readyz HTTP/1.1" 200 OK

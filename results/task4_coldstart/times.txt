@@ -1,0 +1,7 @@
+run 1 pod parser-56ff966cf-49hfx: 49s
+run 1 slowest 49s
+run 2 pod parser-56ff966cf-5jzs6: 54s
+run 2 slowest 54s
+run 3 pod parser-56ff966cf-d8lrb: 24s
+run 3 slowest 24s
+cold start (all replicas Ready) per run: [49.0, 54.0, 24.0]  median: 49s

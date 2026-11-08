@@ -1,0 +1,36 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-11-08 08:57:31,902 INFO Found credentials in environment variables.
+INFO:     10.42.0.1:37712 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:37718 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:37734 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:37736 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:34704 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:34710 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:34720 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     10.42.0.1:34718 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:34724 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:34736 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:54594 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:54610 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:54612 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+2026-11-08 08:57:55,110 INFO Downloaded model v1 (8 files) from http://seaweedfs.data.svc.cluster.local:8333/models/v1/ in 22.7s
+INFO:     10.42.0.1:54624 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:54622 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     10.42.0.1:54632 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:43892 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:43906 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:43920 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:43922 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:43924 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     10.42.0.1:43928 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:33444 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+INFO:     10.42.0.1:33456 - "GET /readyz HTTP/1.1" 503 Service Unavailable
+2026-11-08 08:58:14,077 INFO Model v1 loaded; ready
+INFO:     10.42.0.1:33464 - "GET /readyz HTTP/1.1" 200 OK
+INFO:     10.42.0.1:33480 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     10.42.0.1:33478 - "GET /readyz HTTP/1.1" 200 OK
+INFO:     10.42.0.1:33490 - "GET /readyz HTTP/1.1" 200 OK
+INFO:     10.42.0.1:33246 - "GET /readyz HTTP/1.1" 200 OK

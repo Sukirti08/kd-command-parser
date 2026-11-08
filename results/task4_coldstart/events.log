@@ -1,0 +1,9 @@
+[2026-11-08T08:57:25] run 1: deleting parser-56ff966cf-p86jd
+[run1 parser-56ff966cf-49hfx] 2026-11-08 08:57:55,110 INFO Downloaded model v1 (8 files) from http://seaweedfs.data.svc.cluster.local:8333/models/v1/ in 22.7s
+[run1 parser-56ff966cf-49hfx] 2026-11-08 08:58:14,077 INFO Model v1 loaded; ready
+[2026-11-08T08:58:31] run 2: deleting parser-56ff966cf-49hfx
+[run2 parser-56ff966cf-5jzs6] 2026-11-08 08:59:15,667 INFO Downloaded model v1 (8 files) from http://seaweedfs.data.svc.cluster.local:8333/models/v1/ in 36.5s
+[run2 parser-56ff966cf-5jzs6] 2026-11-08 08:59:24,979 INFO Model v1 loaded; ready
+[2026-11-08T08:59:39] run 3: deleting parser-56ff966cf-5jzs6
+[run3 parser-56ff966cf-d8lrb] 2026-11-08 08:59:51,154 INFO Downloaded model v1 (8 files) from http://seaweedfs.data.svc.cluster.local:8333/models/v1/ in 6.2s
+[run3 parser-56ff966cf-d8lrb] 2026-11-08 09:00:03,348 INFO Model v1 loaded; ready
