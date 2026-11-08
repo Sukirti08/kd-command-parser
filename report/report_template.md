@@ -1,6 +1,6 @@
 ---
 title: "Knowledge Distillation and Deployment of a Command-Parsing Model on a Local Cloud"
-author: "S Naveen — 230101100 — CS3081"
+author: "Sukirti Tiwari — 230101100 — CS3081"
 ---
 <!--
 Fill every ⟨…⟩ from the files in results/. Never type a number that is not in a file.
