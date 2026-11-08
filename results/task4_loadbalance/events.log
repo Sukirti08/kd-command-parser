@@ -1,0 +1,14 @@
+[2026-11-08T09:01:10] pinning HPA min=2 for this test (restored afterwards)
+NAME                     READY   STATUS    RESTARTS   AGE     IP           NODE              NOMINATED NODE   READINESS GATES
+parser-56ff966cf-7hp49   1/1     Running   0          43s     10.42.0.71   k3d-kd-server-0   <none>           <none>
+parser-56ff966cf-d8lrb   1/1     Running   0          2m14s   10.42.0.70   k3d-kd-server-0   <none>           <none>
+[2026-11-08T09:03:59] per-replica counts:
+{
+  "per_replica": {
+    "parser-56ff966cf-7hp49": 91,
+    "parser-56ff966cf-d8lrb": 90
+  },
+  "per_model_version": {
+    "v1": 181
+  }
+}
