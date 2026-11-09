@@ -24,3 +24,4 @@
 - The first recovery and rolling-update runs used one replica (left by the HPA) and failed the targets; rerun with two replicas.
 - A duplicate v2 training process was found with `ps` and stopped.
 - Large GitHub Release uploads failed on my connection and left broken draft releases; deleted and re-uploaded with a retry loop.
+- The handwritten reflection was drafted with Claude from my project notes and written out by hand, adapted in my own words.
