@@ -1,6 +1,6 @@
 # Knowledge distillation + deployment of a command parser on k3d (CS3081 mini project)
 
-**Repository:** https://github.com/Sukirti08/kd-command-parser  ← replace with your link
+**Repository:** https://github.com/Sukirti08/kd-command-parser
 **Model releases:** `model-v1`, `model-v2` (assets: `model-vN.tar.gz`, `model-vN.sha256`)
 
 Phi-3.5-mini (teacher, via Ollama, temperature 0, seed 42) labels 3,000 commands.
